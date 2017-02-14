@@ -1,0 +1,86 @@
+﻿.avlRow tr:nth-child(even) {
+    background-color: #232323;
+}
+
+.avlCellID {
+    vertical-align: middle;
+    text-align: left;
+    color: white;
+    padding-left: 4px;
+    letter-spacing: 0.1em;
+    width: 10%;
+    visibility: hidden;
+    display: none;
+    height: 12px;
+}
+
+.avlCellVehicle {
+    vertical-align: middle;
+    text-align: left;
+    font-weight: bold;
+    /*color: #333333;*/
+    padding-left: 4px;
+    letter-spacing: 0.1em;
+    height: 12px;
+}
+
+.avlCellGroup {
+    vertical-align: middle;
+    text-align: right;
+    color: #F0F0F0;
+    padding-right: 4px;
+    letter-spacing: 0.1em;
+    height: 12px;
+}
+
+.avlCellStatus {
+    vertical-align: middle;
+    text-align: left;
+    color: #F0F0F0;
+    padding-left: 4px;
+    letter-spacing: 0.1em;
+    height: 12px;
+}
+
+.avlCellAVStatus {
+    vertical-align: middle;
+    text-align: right;
+    color: #F0F0F0;
+    padding-right: 4px;
+    letter-spacing: 0.1em;
+    height: 12px;
+}
+
+.avlCellIncident {
+    vertical-align: middle;
+    text-align: left;
+    color: #F0F0F0;
+    padding-left: 4px;
+    letter-spacing: 0.1em;
+    height: 12px;
+}
+
+.avlDistrict {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: right;
+    font-weight: bold;
+    height: 12px;
+}
+.avlDistrictFree {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: right;
+    font-weight: normal;
+    font-size: 10pt;
+}
+.avlDistrictHeader {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(25,25,25);
+}

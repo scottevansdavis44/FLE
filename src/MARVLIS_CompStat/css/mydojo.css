@@ -1,0 +1,296 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for calendar */
+.red {
+    background-color: rgba(255, 0, 0, 0.25) !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for tooltips */
+.claro .dijitTooltipContainer {
+    background-color: rgb(238,232,170) !important;
+    background-image: none !important;
+    border: none !important;
+    padding: 6px 8px;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    color: black !important;
+    max-width: 220px;
+}
+
+.claro .dijitTooltipConnector {
+    border: 0;
+    z-index: 2;
+    background-image: none !important;
+    /*background-image: url('../img/tooltip.png') !important;*/
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 14px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Floating Pane*/
+.dojoxFloatingPane {
+    background-color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+.dojoxFloatingPaneTitle {
+    background-color: #000000 !important;
+    background: url(../img/titlebar.png) !important;
+    border: 1px solid #000000 !important;
+    padding: 4px 4px 2px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: White;
+    height: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.dojoxFloatingPaneContent {
+    background-color: #000000 !important;
+}
+
+.dojoxFloatingPaneCanvas {
+    background-color: #000000 !important;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Dialog*/
+.claro .dijitDialogPaneContent {
+    background: rgb(23,23,23) !important;
+    border-top: none !important;
+    color: White;
+}
+
+.claro .dijitDialog {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    border-radius: 5px 5px 5px 5px !important;
+    border: none !important;
+}
+
+.dijitDialogCloseIcon {
+    display: none;
+}
+
+.dijitDialogTitle {
+    font-size: 12pt !important;
+    color: white !important;
+}
+
+.dijitDialogTitleBar {
+    color: White;
+    height: 20px;
+    font-size: 12pt;
+    font-weight: 600;
+    overflow: hidden;
+    background: rgb(23,23,23) !important;
+    border: none !important;
+    padding: 4px 7px 3px 7px !important;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Accordion*/
+.claro .dijitAccordionContainer-dijitContentPane {
+    background-color: #F2F2F2 !important;
+    padding: 2px !important;
+}
+
+.claro .dijitAccordionInnerContainerSelected .dijitAccordionTitle {
+    color: rgb(255, 102, 0) !important;
+}
+
+.claro .dijitAccordionInnerContainerHover .dijitAccordionTitle {
+    color: rgb(255, 153, 0) !important;
+}
+
+.claro .dijitAccordionTitle {
+    border-color: rgb(23,23,23) !important;
+    background: url("../img/New_PortalBanner_Pane.png") no-repeat top left rgb(23,23,23) !important;
+    min-height: 17px;
+    padding-right: 7px !important;
+    padding-bottom: 7px !important;
+    padding-left: 7px !important;
+    color: white !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.claro .dijitAccordionInnerContainer {
+    border-color: rgb(23,23,23) !important;
+    background-color: rgb(23,23,23) !important;
+}
+
+.claro .dijitAccordionInnerContainerSelected {
+    border-color: rgb(23,23,23) !important;
+    background-color: rgb(23,23,23) !important;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*button*/
+.claro .dijitDropDownButton .dijitButtonNode {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+.claro .dijitDropDownButtonHover .dijitButtonNode {
+    background-color: #A9A9A9 !important; /*background-image: url("../img/titlebar.png") !important;*/
+}
+
+.claro .dijitButton .dijitButtonNode {
+    padding: 11px !important;
+    background-color: #2A2A2A !important;
+    background-image: none !important;
+    border: 0.1em solid #808080 !important;
+    border-radius: 23px 23px 23px 23px !important;
+    color: #F0F0F0 !important;
+    letter-spacing: 0.1em;
+}
+
+.claro .dijitButtonHover .dijitButtonNode {
+    border: 0.1em solid #FFCC00 !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for dijit buttons*/
+.claro .dijitToggleButton .dijitButtonNode {
+    background-color: #2A2A2A !important;
+    background-image: none !important;
+    border: 0.1em solid #808080 !important;
+    border-radius: 23px 23px 23px 23px !important;
+    color: #F0F0F0 !important;
+    height: 20px !important;
+    width: 36px !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    font-weight: normal;
+}
+
+.claro .dijitToggleButtonHover .dijitButtonNode {
+    border: 0.1em solid #FFCC00 !important;
+}
+
+.claro .dijitToggleButtonChecked .dijitButtonNode {
+    border: 0.1em solid #FF6600 !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for dijit select*/
+.claro .dijitSelect .dijitButtonText {
+    padding: 2px !important;
+}
+
+.claro .dijitSelect {
+    border: 1px solid black;
+    border-radius: 4px 4px 4px 4px;
+    background-color: white !important;
+    border-collapse: separate;
+    color: #000000 !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 12pt !important;
+    letter-spacing: 0.1em;
+}
+
+.dj_ie6 .claro .dijitSelect, .dj_ie6 .claro .dijitSelect .dijitButtonNode {
+    background-image: none;
+}
+
+.claro .dijitSelect .dijitButtonContents {
+    border: 0 solid #b5bcc7;
+    border-right-width: 1px;
+}
+
+.claro .dijitSelect .dijitArrowButton {
+    padding: 0;
+    border: 1px solid transparent !important;
+    border-radius: 0 0 0 0 !important;
+    border-top: none;
+    background-color: transparent !important;
+    background-image: none !important;
+    background-repeat: repeat-x;
+}
+
+    .claro .dijitSelect .dijitArrowButton .dijitArrowButtonInner {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAACZSURBVDhP5ZJNCsMgEEaNaQvtqXMI9QIiuFJcuBFBb2YzMqaQaigpdNMHg59/TwXJH5FSojlnGmOc1nbC4fOEEGaML0opHxXgvb/X0LDWXjEe0gTOuUcNDWNMNS7LUkYF802wrn9/QmO0GQCB1vqC3TG9zUC7QRcp5WbuCZRS86Fgz/50oCsQQnz3MRhjNyjsnoNzTjH+EkKeqdWBwMepAekAAAAASUVORK5CYII=') /*../img/DropDownButton.png*/ !important;
+        background-position: 0 0 !important;
+        height: 16px !important;
+        border: transparent !important;
+    }
+
+.claro .dijitSelectHover {
+    border: 1px solid #707070;
+    background-color: #000000;
+}
+
+    .claro .dijitSelectHover .dijitButtonContents {
+        border-color: white;
+    }
+
+    .claro .dijitSelectHover .dijitArrowButton {
+        background-color: white;
+    }
+
+        .claro .dijitSelectHover .dijitArrowButton .dijitArrowButtonInner {
+            background-position: -70px 70%;
+        }
+
+.claro .dijitSelectFocused {
+    border: 1px solid #707070;
+}
+
+    .claro .dijitSelectFocused .dijitButtonContents {
+        border-color: #707070;
+    }
+
+    .claro .dijitSelectFocused .dijitArrowButton {
+        background-color: white;
+        background-position: 0 -177px;
+        border: none;
+        padding: 0 1px;
+    }
+
+        .claro .dijitSelectFocused .dijitArrowButton .dijitArrowButtonInner {
+            background-position: -70px 70%;
+            margin-bottom: 1px;
+        }
+
+.claro .dijitSelectDisabled {
+    border: 1px solid #d3d3d3;
+    background-color: #efefef;
+    background-image: none;
+    color: #818181;
+}
+
+    .claro .dijitSelectDisabled .dijitArrowButton {
+        background-color: #efefef;
+    }
+
+        .claro .dijitSelectDisabled .dijitArrowButton .dijitArrowButtonInner {
+            background-position: 0 70%;
+        }
+
+.claro .dijitSelectMenu {
+    background-color: white !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+    .claro .dijitSelectMenu td.dijitMenuItemIconCell, .claro .dijitSelectMenu td.dijitMenuArrowCell {
+        display: none;
+    }
+
+    .claro .dijitSelectMenu td.dijitMenuItemLabel {
+        padding: 2px;
+        color: black !important;
+    }
+
+    .claro .dijitSelectMenu .dijitMenuSeparatorTop {
+        border-bottom: 1px solid #769dc0;
+    }
+
+    .claro .dijitSelectMenu .dijitMenuItemSelected td {
+        color: #FF0000 !important;
+        background-color: #C0C0C0;
+    }

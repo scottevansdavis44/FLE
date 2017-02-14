@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10,IE=11" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <link rel="SHORTCUT ICON" href="img/crime_imap.ico" />
+    <title>FLE CompStat Portal</title>
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dijit/themes/dijit.css" />
+    <link rel="Stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="Stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="Stylesheet" type="text/css" href="css/myesri.css" />
+    <link rel="Stylesheet" type="text/css" href="css/mypopup_parent.css" />
+    <link rel="Stylesheet" type="text/css" href="css/mydojo.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dojox/layout/resources/ResizeHandle.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dojox/layout/resources/FloatingPane.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dojox/grid/enhanced/resources/claro/EnhancedGrid.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/dojox/widget/ColorPicker/ColorPicker.css" />
+    <link rel="stylesheet" type="text/css" href="//darkside/arcgis_js_api/library/3.16/3.16/esri/css/esri.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="//darkside/arcgis_js_api/library/3.16/3.16/init.js"></script>
+    <script type="text/javascript" src="codes/codes.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <!--<script type="text/javascript" src="js/sys.js"></script>-->
+    <script type="text/javascript" src="js/objType.js"></script>
+    <script type="text/javascript" src="js/system_widgethandler.js"></script>
+    <script type="text/javascript" src="js/system_online.js"></script>
+    <script type="text/javascript" src="js/system_error.js"></script>
+    <script type="text/javascript" src="js/system_dms.js"></script>
+    <script type="text/javascript" src="js/system_toc.js"></script>
+    <script type="text/javascript" src="js/system_summaries.js"></script>
+    <script type="text/javascript" src="js/system_table.js"></script>
+    <script type="text/javascript" src="js/system_initial.js"></script>
+    <script type="text/javascript" src="js/system_requires.js"></script>
+</head>
+<body class="claro">
+    <!--MAIN-->
+    <div id="divMainContainer" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", gutters:false'
+         style="width: 100%; height: 100%;">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"pageHeaderTop"'>
+            <div style="float:right; height:100%; padding: 8px 12px 0 0; overflow: hidden;">
+                <img src="img/CoF_Logo_150x70.png" style="height: 70px;" />
+            </div>
+            <div style="float:left; height:100%; overflow: hidden;">
+                <table style="width: 100%; height: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding-left: 12px; padding-top: 12px;">
+                            <table style="float: left; border-collapse: collapse;">
+                                <tr>
+                                    <td>
+                                        <img src="img/MFLE_Logo_250x50.png" />
+                                    </td>
+                                    <td style="padding-left: 6px">
+                                        <label class="pageHeaderTitle">
+                                            CompStat
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="float: left; height: 100%; padding:26px 0 0 40px;">
+                <table style="height: 100%; border-collapse:collapse">
+                    <tr>
+                        <td style="vertical-align: middle; text-align: right;padding:3px 10px 0 0;">
+                            <img src="img/locate.png" style="width: 24px; height: 24px" alt="quick zoom" />
+                        </td>
+                        <td id="tdQuickZoom" style="vertical-align: middle; text-align: left"></td>
+                        <td style="vertical-align: middle; text-align: right; padding:3px 10px 0 10px;">
+                            <img id="imgStartDate" src="img/calendar.png" style="width: 24px; height: 24px; cursor: pointer;" alt="week"
+                                 onclick="showStartDate()" />
+                        </td>
+                        <td id="tdWeek" style="vertical-align: middle; text-align: left"></td>
+                        <td style="vertical-align: middle; text-align: left; padding:0 10px 0 10px;">
+                            <label id="lblDateRange" style="color: #E6E6E6; font-size: 14pt;">
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+             style="overflow: hidden; padding: 0 !important; margin: 0; border: 0; width: 100%;
+            height: 100%; background-color: rgb(30,30,30);">
+            <div id="btnHome">
+            </div>
+            <div title="Enable navigation" class="panButton" onclick="enableNavigation()">
+            </div>
+            <div id="search">
+            </div>
+            <div id="basemaps" class="basemaps">
+                <table style="width: 100%; height: 100%">
+                    <tr>
+                        <td onclick="ufocus(); dijit.byId('dialogMobileBasemap').show();" style="width: 50%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer;">
+                            <img alt="basemaps" src="img/imgBaseMap.png" />
+                        </td>
+                        <td onclick="toggleChildOnOff();" style="width: 50%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer; border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="childOnOff" alt="ChildOnOff" src="img/child_on.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="colorPicker" class="colorPicker">
+                <table style="height: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td id="finalColor" style="width: 36px; background-color: #FF0000"></td>
+                        <td style="text-align: center; vertical-align: middle">
+                            <div id="btnColorPicker" data-dojo-type="dijit/form/DropDownButton" data-dojo-props='label:"Color"'>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="drawTool" class="drawTool">
+                <table style="width: 100%; height: 100%">
+                    <tr>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer;">
+                            <img id="draw_Arrow" alt="Point" src="img/draw_Arrow.png" />
+                        </td>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer; border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="draw_Circle" alt="Circle" src="img/draw_Circle.png" />
+                        </td>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer; border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="draw_FreehandPolygon" alt="FreehandPolygon" src="img/draw_FreehandPolygon.png" />
+                        </td>
+                        <td style="vertical-align: middle; text-align: center; padding-top: 4px; cursor: pointer;
+                            border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="draw_Cancel" alt="Cancel" src="img/draw_Cancel.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="measureTool" class="measureTool">
+                <table style="width: 100%; height: 100%">
+                    <tr>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer;">
+                            <img id="mea_Point" alt="Point" src="img/mea_Point.png" />
+                        </td>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer; border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="mea_Polyline" alt="Polyline" src="img/mea_Polyline.png" />
+                        </td>
+                        <td style="width: 25%; vertical-align: middle; text-align: center; padding-top: 4px;
+                            cursor: pointer; border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="mea_Polygon" alt="Polygon" src="img/mea_Polygon.png" />
+                        </td>
+                        <td style="vertical-align: middle; text-align: center; padding-top: 4px; cursor: pointer;
+                            border-left-style: solid; border-left-width: thin; border-left-color: #57585A;">
+                            <img id="mea_Cancel" alt="Cancel" src="img/mea_Cancel.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="chartPaneMain" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", gutters:false, splitter:true'
+                 class="chartPane">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", splitter:false'
+                     style="overflow:hidden; height: 30px;">
+                    <table style="width: 290px; height: 100%">
+                        <tr>
+                            <td style="padding-left: 4px; vertical-align: middle; text-align: left; padding-bottom: 4px;">
+                                <label id="chartPaneLabel" class="chartPaneLabel">
+                                </label>
+                            </td>
+                            <td style="padding-right: 4px; vertical-align: middle; text-align: right; width: 24px;">
+                                <img alt="close" src="img/white_close.png" style="width: 20px; height: 20px" onclick="closeChartPane()" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="chartPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center", splitter:false'
+                     style="padding: 0 !important; margin: 0 !important; width: 100%; height: 100%;
+                    overflow: hidden;">
+                </div>
+            </div>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"right", splitter:false'
+             style="padding: 0 !important; margin: 0 !important; width: 4px;">
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"bottom", splitter:false'
+             style="padding: 0 !important; margin: 0 !important; height: 4px;">
+        </div>
+        <div id="leftPane" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='region:"left", design:"headline", gutters:false, splitter:true, minSize:324'
+             style="width: 324px; padding: 0 !important;">
+            <div style="z-index: 10; position: absolute; top: 4px; right: 4px; padding: 0; width: 26px; height: 26px; overflow: hidden;">
+                <table style="width: 100%; height: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td id="tdOnOff" onclick="toggleAllEventLayersOff();" style="vertical-align: middle; text-align: right;">
+                            <img id="imgOnOff" alt="OnOff" src="img/on.png" style="cursor: pointer;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='region:"center", design:"headline", gutters:false, splitter:false'
+                 style="padding: 0 !important; height: 100%; width: 100%;">
+
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center", splitter:false'
+                     style="padding: 0 !important; height: 100%; width: 100%;">
+                    <!--TOC-->
+                    <div id="divAccordion" data-dojo-type="dijit/layout/ContentPane" class="myshowG"
+                         style="padding: 0 !important; height: 100%; width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"bottom", splitter:false'
+                 style="padding: 0 !important; margin: 0 !important; height: 1px;">
+            </div>
+        </div>
+    </div>
+    <!-- LOADING -->
+    <div id="divLoadingIndicator" class="divLoadingIndicator" style="display: block;
+        opacity: 1.0">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="text-align: center">
+                    <table style="width: 100%; height: 100%;">
+                        <tr>
+                            <td style="text-align: right; width: 50%;">
+                                <img src="img/loading.gif" alt="loading" />
+                            </td>
+                            <td id="loadingMessage" style="color: #F0F0F0; font-size: 11px; text-align: left;
+                                font-weight: bold; font-style: italic;"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- WORKING -->
+    <div id="divWorking" class="divWorkingIndicator" style="display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="text-align: center">
+                    <table style="width: 100%; height: 100%;">
+                        <tr>
+                            <td style="text-align: center;">
+                                <img src="img/loading2.gif" alt="working" style="width: 30px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- ALERT -->
+    <div id="dialogAlertMessage" data-dojo-type="dijit/Dialog" title="Alert" style="width: 340px;
+        z-index: 10001;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center; padding-right: 4px; padding-left: 4px;">
+                    <img alt="icon" src="img/alert.png" style="width: 40px; height: 40px" />
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <div id="divMessage" style="color: #F0F0F0;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 12px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;" colspan="2">
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:function(){dijit.byId("dialogAlertMessage").hide();}'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- INFO -->
+    <div id="dialogInformationMessage" data-dojo-type="dijit/Dialog" title="Information"
+         style="width: 300px; z-index: 10000;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center; padding-right: 4px; padding-left: 4px;">
+                    <img alt="icon" src="img/information.png" style="width: 40px; height: 40px" />
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <div id="divInformation" style="color: #F0F0F0;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 12px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;" colspan="2">
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:function(){dijit.byId("dialogInformationMessage").hide();}'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- START DATE -->
+    <div id="divStartDate" data-dojo-type="dijit/Dialog" data-dojo-props='title:"Set First Day Of Reporting Period", class:"divStartDate"'>
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <!--<td style="vertical-align: middle; text-align: center; padding-right: 4px; padding-left: 4px;">
+                    <img alt="icon" src="img/information.png" style="width: 40px; height: 40px" />
+                </td>-->
+                <td style="text-align: center; vertical-align: middle; padding-left: 40px">
+                    <!--<input id="dttStartDate" data-dojo-type="dijit/form/DateTextBox" style="width: 86px;" />-->
+                    <div id="tdStartDate">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle; text-align: center">
+                    <label id="lblDateRangeUser" style="padding: 6px">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;">
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:closeStartDate'>
+                    </div>
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"Cancel", iconClass:"cancelIcon", showLabel:false, onClick:cancelStartDate'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- BASEMAP -->
+    <div id="dialogMobileBasemap" data-dojo-type="dijit/Dialog" data-dojo-props='title:"Basemaps", class:"dialogMobileBasemap"'>
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center">
+                    <div id="divMobileBasemap" class="divMobileBasemap">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding-top: 12px;">
+                    <button data-dojo-type="dijit/form/Button" data-dojo-props='class:"childButtons", iconClass:"", showLabel:true, label:"Close", onClick:function(evt){ufocus(); dijit.byId("dialogMobileBasemap").hide();}'></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- TABLE -->
+    <div id="dialogTable" data-dojo-type="dijit/Dialog" data-dojo-props='title:"Table", class:"dialogTable"'>
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center">
+                    <div id="divTableBody" class="divTableBody">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle; padding-top: 12px;">
+                    <button data-dojo-type="dijit/form/Button" data-dojo-props='class:"childButtons", iconClass:"", showLabel:true, label:"Close", onClick:function(evt){ufocus(); dijit.byId("dialogTable").hide();}'></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- ONLINE -->
+    <div id="divOnLine" data-dojo-type="dijit/Dialog" title="Load ArcGIS OnLine Web Map Data"
+         style="width: 500px;">
+        <div id='gridpane' data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:false, class:'agol_gridpane'">
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="margin: 0;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-bottom: 8px; display: inline;">
+                            <label style="padding-right: 8px">
+                                Search for Group
+                            </label>
+                            <input id="groupFinder" data-dojo-type="dijit/form/TextBox" data-dojo-props='type:"text", trim:true, value:"CompStat"'
+                                   style="width: 35%" />
+                            <label onclick="findArcGISGroup();" style="color: #0066FF; text-decoration: underline;
+                                    padding-left: 8px; cursor: pointer;">
+                                Find
+                            </label>
+                        </td>
+                        <td style="text-align: right; vertical-align: middle; padding-bottom: 8px; display: inline;">
+                            <label id="signIn" onclick="signIn();" style="color: #0066FF; text-decoration: underline;
+                                padding-right: 8px; padding-left:20px; cursor: pointer;">
+                                Sign In
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+                 style="overflow: hidden; width: 100%; height: 100%;">
+                <div id='grid' class="agol_grid">
+                </div>
+                <div id="groupResults">
+                </div>
+                <div id="myFeatureLayerMap" style="display: none">
+                </div>
+                <div id="ui-map" style="display: none">
+                </div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;" colspan="3">
+                            <!--<div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:closeOnLine'>
+                            </div>-->
+                            <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"Cancel", iconClass:"cancelIcon", showLabel:false, onClick:cancelOnLine'>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

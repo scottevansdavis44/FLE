@@ -1,0 +1,63 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*search*/
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*slider customizations*/
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton, .esriSimpleSliderVertical .esriSimpleSliderDecrementButton {
+    border-radius: 17px !important;
+    /*box-shadow: 0 0 0.25em #BBBBBB;*/
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+}
+
+.esriSimpleSlider {
+    top: 4px !important;
+    right: 10px !important;
+    left: auto !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+    .esriSimpleSlider div {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        opacity: 0.5;
+    }
+
+        .esriSimpleSlider div:hover {
+            opacity: 1.0;
+            /*box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;*/
+        }
+/* home nav button */
+.HomeButton .home {
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+    border-radius: 17px !important;
+    /*box-shadow: 0 0 0.25em #BBBBBB !important;*/
+    width: 27px !important;
+    height: 27px !important;
+}
+
+.HomeButton {
+    position: absolute;
+    top: 96px;
+    right: 10px;
+    z-index: 50;
+}
+
+.homeContainer {
+    opacity: 0.5 !important;
+}
+
+    .homeContainer:hover {
+        opacity: 1.0 !important;
+    }

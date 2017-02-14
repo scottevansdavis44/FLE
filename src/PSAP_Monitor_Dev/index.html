@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=11" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <link rel="SHORTCUT ICON" href="img/crime_imap.ico" />
+    <title>MARVLIS</title>
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/dijit/themes/dijit.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/dojox/layout/resources/ResizeHandle.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/dojox/layout/resources/FloatingPane.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/dojox/layout/resources/GridContainer.css" />
+    <link rel="Stylesheet" type="text/css" href="css/scrollbars.css" />
+    <link rel="Stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="Stylesheet" type="text/css" href="css/gaugeMin.css" />
+    <link rel="Stylesheet" type="text/css" href="css/myesri.css" />
+    <link rel="Stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="Stylesheet" type="text/css" href="css/select.css" />
+    <link rel="Stylesheet" type="text/css" href="css/tooltip.css" />
+    <link rel="Stylesheet" type="text/css" href="css/dialog.css" />
+    <link rel="Stylesheet" type="text/css" href="css/dojofloat.css" />
+    <link rel="Stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="Stylesheet" type="text/css" href="css/avl.css" />
+    <link rel="Stylesheet" type="text/css" href="css/cfs.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.16/esri/css/esri.css" />
+    <script type="text/javascript" src="//js.arcgis.com/3.16/"></script>
+    <script type="text/javascript" src="js/a_setting.js"></script>
+    <!--<script type="text/javascript" src="js/sys.js"></script>-->
+    <script type="text/javascript" src="js/sys_marvlis.js"></script>
+    <script type="text/javascript" src="js/sys_err.js"></script>
+    <script type="text/javascript" src="js/sys_util.js"></script>
+    <script type="text/javascript" src="js/sys_toc.js"></script>
+    <script type="text/javascript" src="js/sys_avl.js"></script>
+    <script type="text/javascript" src="js/sys_cfs.js"></script>
+    <script type="text/javascript" src="js/sys_response.js"></script>
+    <script type="text/javascript" src="js/sys_initial.js"></script>
+    <!--<script>
+        require([
+          "esri/arcgis/Portal", "esri/arcgis/OAuthInfo", "esri/IdentityManager",
+          "dojo/dom-style", "dojo/dom-attr", "dojo/dom", "dojo/on", "dojo/_base/array",
+          "dojo/domReady!"
+        ], function (arcgisPortal, OAuthInfo, esriId,
+          domStyle, domAttr, dom, on, arrayUtils) {
+            var info = new OAuthInfo({
+                appId: "wChhAivKbKbxwVvV",
+                popup: false
+            });
+            esriId.registerOAuthInfos([info]);
+            esriId.checkSignInStatus(info.portalUrl + "/sharing").then(function () {
+                //displayItems();
+            }).otherwise(function () { window.location = "authorize.html"; });
+
+            function displayItems() {
+                new arcgisPortal.Portal(info.portalUrl).signIn().then(
+                  function (portalUser) {
+                      //alert("Signed in to the portal: ", portalUser);
+                      //alert(portalUser.username);
+
+                      //portalUser.getGroups().then(function(groups){
+                      //array.forEach(groups,function(group){
+                      //var description = group.description;
+                      //});
+                      // });
+                  }
+                ).otherwise(
+                  function (error) {
+                      console.log("Error occurred while signing in: ", error);
+                  }
+                );
+            }
+            //esriConfig.defaults.io.proxyUrl = "proxy.ashx";
+            //esriConfig.defaults.io.alwaysUseProxy = false;
+        });
+    </script>-->
+</head>
+<body class="claro">
+    <!--HEADER-->
+    <div class="mainHeader">
+        <table style="float: left; border-collapse: collapse;">
+            <tr>
+                <td>
+                    <img id="imageHeader" src="img/MFLE_Logo.png" />
+                </td>
+                <td style="padding: 1px 0 0 24px;">
+                    <label id="titleHeader" class="pageHeaderTitle">
+                        Operations Monitor
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <div id="imgCloseLeftPane" class="closePaneDiv" onclick="closeLeftPane()">
+        </div>
+    </div>
+    <!--MAIN-->
+    <div id="divMainContainer" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"sidebar", gutters:false'
+         style="padding: 0 !important; margin: 0 !important; width: 100%; height: 100%;">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top"'
+             style="padding: 0 !important; margin: 0 !important; width: 2px;">
+        </div>
+        <!--LEFT-->
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='id:"leftPane", class:"leftPanel", design:"headline", region:"left", gutters:false, splitter:false'>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top"' style="padding: 0 !important; margin: 0 !important; overflow: hidden; height: 80px;">
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"' style="padding: 0 !important; margin: 0 !important; overflow: hidden;">
+                <table style=" width 100%; border-collapse collapse;">
+                    <tr style="text-align:center">
+                        <td id="tdChart" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td id="tdAVL" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td id="tdCFS" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td id="tdLayers" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td id="tdFeeds" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <td id="tdEdit" style="vertical-align: middle; text-align: center;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"bottom"' style="padding: 2px !important; margin: 0 !important; overflow: hidden;">
+                <table class="gaugeMinTable">
+                    <tr>
+                        <td class="gaugeMinSubTableTD">
+                            <table class="gaugeMinSubTable" onclick="mydragg.max('floater_P1')">
+                                <tr>
+                                    <td colspan="3" class="gaugeMinTitle">
+                                        <label style="cursor:pointer;">P1</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="guageMinAllCalls">
+                                        <label id="lblMinAllCalls_P1" style="cursor:pointer;">44</label>
+                                    </td>
+                                    <td class="gaugeMinPipe">
+                                        <!--<label style="cursor:pointer;">|</label>-->
+                                        <img src="img/dot.png" style="cursor:pointer;" />
+                                    </td>
+                                    <td class="guageMinUnassignedCalls">
+                                        <label id="lblMinUnassignedCalls_P1" style="cursor:pointer;">33</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gaugeMinSubTableTD">
+                            <table class="gaugeMinSubTable" onclick="mydragg.max('floater_P2')">
+                                <tr>
+                                    <td colspan="3" class="gaugeMinTitle">
+                                        <label style="cursor:pointer;">P2</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="guageMinAllCalls">
+                                        <label id="lblMinAllCalls_P2" style="cursor:pointer;">44</label>
+                                    </td>
+                                    <td class="gaugeMinPipe">
+                                        <!--<label style="cursor:pointer;">|</label>-->
+                                        <img src="img/dot.png" style="cursor:pointer;" />
+                                    </td>
+                                    <td class="guageMinUnassignedCalls">
+                                        <label id="lblMinUnassignedCalls_P2" style="cursor:pointer;">33</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gaugeMinSubTableTD">
+                            <table class="gaugeMinSubTable" onclick="mydragg.max('floater_P3')">
+                                <tr>
+                                    <td colspan="3" class="gaugeMinTitle">
+                                        <label style="cursor:pointer;">P3</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="guageMinAllCalls">
+                                        <label id="lblMinAllCalls_P3" style="cursor:pointer;">44</label>
+                                    </td>
+                                    <td class="gaugeMinPipe">
+                                        <!--<label style="cursor:pointer;">|</label>-->
+                                        <img src="img/dot.png" style="cursor:pointer;" />
+                                    </td>
+                                    <td class="guageMinUnassignedCalls">
+                                        <label id="lblMinUnassignedCalls_P3" style="cursor:pointer;">33</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gaugeMinSubTableTD">
+                            <table class="gaugeMinSubTable" onclick="mydragg.max('floater_P4')">
+                                <tr>
+                                    <td colspan="3" class="gaugeMinTitle">
+                                        <label style="cursor:pointer;">PO</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="guageMinAllCalls">
+                                        <label id="lblMinAllCalls_P4" style="cursor:pointer;">44</label>
+                                    </td>
+                                    <td class="gaugeMinPipe">
+                                        <!--<label style="cursor:pointer;">|</label>-->
+                                        <img src="img/dot.png" style="cursor:pointer;" />
+                                    </td>
+                                    <td class="guageMinUnassignedCalls">
+                                        <label id="lblMinUnassignedCalls_P4" style="cursor:pointer;">33</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--CENTER MAP-->
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='id:"mapMain", design:"headline", gutters:false, region:"center"'
+             style="width: 100%">
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'>
+                <div id="snapGrid" class="snapGrid">
+                </div>
+                <div id="mapDiv" class="mapDivCSS">
+                    <div id="informationPane" class="slideopen">
+                        <!--AVL TABLE-->
+                        <div id="AVLPanePage" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='class:"myhidePane", design:"headline", splitter:false, gutters:false'
+                             style="height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                <table style="height: 100%; width: 100%; border-collapse: collapse">
+                                    <tr>
+                                        <td class="avlcfsTitle">
+                                            <label id="unitMonitor">
+                                                Unit Monitor
+                                            </label>
+                                        </td>
+                                        <td id="tdAVLSort" style="text-align: right; vertical-align: middle"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="avlPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                            </div>
+                        </div>
+                        <!--CFS TABLE-->
+                        <div id="CFSPanePage" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='class:"myhidePane", design:"headline", splitter:false, gutters:false'
+                             style="height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                <table style="height: 100%; width: 100%; border-collapse: collapse; ">
+                                    <tr>
+                                        <td class="avlcfsTitle">
+                                            <label id="cfsMonitor">
+                                                Calls Monitor
+                                            </label>
+                                        </td>
+                                        <td id="tdCFSSort" style="text-align: right; vertical-align: middle"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="cfsPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                            </div>
+                        </div>
+                        <!--CFS DETAIL-->
+                        <div id="CFSDetailPanePage" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='class:"myhidePane", design:"headline", splitter:false, gutters:false'
+                             style="height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                <table style="height: 100%; border-collapse: collapse">
+                                    <tr>
+                                        <td class="avlcfsTitle">
+                                            <label id="cfsDetailMonitor">
+                                                Call Detail Monitor
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="cfsDetailPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                                 style="width: 100%; height: 100%; overflow: auto; margin-bottom: 10px !important;">
+                            </div>
+                            <div id="cfsNotesPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"bottom", splitter:true'
+                                 style="width: 100%; height: 60%; overflow: auto; margin-bottom: 10px !important;">
+                            </div>
+                        </div>
+                        <!--AVL CFS CHARTS-->
+                        <div data-dojo-type="dojox/layout/GridContainerLite" data-dojo-props='class:"myshowPane", id:"AVLCFSPanePage", nbZones:1, isAutoOrganized:true, hasResizableColumns:false, doLayout:true'
+                             style="padding: 0 !important; height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='dragRestriction:true' style="height: 37%; padding: 0 !important;">
+                                <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", splitter:false, gutters:false, class:"gcPane"'>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                        <table style="height: 100%; border-collapse: collapse">
+                                            <tr>
+                                                <td class="avlcfsTitle">
+                                                    <label id="avlcfsMonitor">
+                                                        Priority Calls by District
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='id:"cfsPaneInner", region:"center", doLayout:true'
+                                         style="overflow: hidden; padding: 0 !important; width: 100%; height: 100%; margin: 0; border: 0;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='dragRestriction:true' style="height: 32%; padding: 0 !important;">
+                                <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", splitter:false, gutters:false, class:"gcPane"'>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar2"'>
+                                        <table style="height: 100%; border-collapse: collapse">
+                                            <tr>
+                                                <td class="avlcfsTitle">
+                                                    <label id="avlcfsMonitor">
+                                                        Units On Call/Unavailable (percent)
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='id:"divVehicleAvail", region:"center", doLayout:true'
+                                         style="overflow: hidden; padding: 0 !important; width: 100%; height: 100%;  margin: 0; border: 0;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='dragRestriction:true' style="height: 25%; padding: 0 !important;">
+                                <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", splitter:false, gutters:false, class:"gcPane"'>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar2"'>
+                                        <table style="height: 100%; width: 100%; border-collapse: collapse; ">
+                                            <tr>
+                                                <td class="avlcfsTitle">
+                                                    <label id="avlcfsMonitor">
+                                                        Average Priority Response Times
+                                                    </label>
+                                                </td>
+                                                <td id="tdPriority" style="text-align: right; vertical-align: middle"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='id:"divResponse", region:"center", doLayout:true'
+                                         style="overflow: hidden; padding: 10px !important; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--TOC-->
+                        <div id="TOCPanePage" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='class:"myhidePane", design:"headline", splitter:false, gutters:false'
+                             style="height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                <table style="height: 100%; width: 100%; border-collapse: collapse">
+                                    <tr>
+                                        <td class="avlcfsTitle">
+                                            <label id="unitMonitor">
+                                                Table of Contents
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="toc" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                            </div>
+                        </div>
+                        <!--FEEDS-->
+                        <div id="FEEDPanePage" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='class:"myhidePane", design:"headline", splitter:false, gutters:false'
+                             style="height: 100%; width: 100%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar"'>
+                                <table style="height: 100%; width: 100%; border-collapse: collapse">
+                                    <tr>
+                                        <td class="avlcfsTitle">
+                                            <label id="unitMonitor">
+                                                Feeds
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="feeds" data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="search">
+                    </div>
+                    <div id="btnHome">
+                    </div>
+                    <div id="btnBaseMap" class="basemapButton" title="Basemaps">
+                    </div>
+                    <div class="gaugeFloater2" id="floater_P1" title="PI" onshow="mydragg.onshow(this);" onmousedown="mydragg.startMoving(this, 'mapDiv', event);" onmouseup="mydragg.stopMoving(this,'mapDiv');" style="width: 170px; height: 120px; left: 0; top:200px;">
+                        <div class="gaugeTitle">
+                            <label onclick="mydragg.min('floater_P1')" style="cursor: pointer">
+                                P1
+                            </label>
+                        </div>
+                        <div class="gaugePaneTop">
+                            <div id="gaugeP1" class="gaugePane">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaugeFloater2" id="floater_P2" title="P2" onshow="mydragg.onshow(this);" onmousedown="mydragg.startMoving(this, 'mapDiv', event);" onmouseup="mydragg.stopMoving(this,'mapDiv');" style="width: 170px; height: 120px; left: 150px;top:200px;">
+                        <div class="gaugeTitle">
+                            <label onclick="mydragg.min('floater_P2')" style="cursor: pointer">
+                                P2
+                            </label>
+                        </div>
+                        <div class="gaugePaneTop">
+                            <div id="gaugeP2" class="gaugePane">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaugeFloater2" id="floater_P3" title="P3" onshow="mydragg.onshow(this);" onmousedown="mydragg.startMoving(this, 'mapDiv', event);" onmouseup="mydragg.stopMoving(this,'mapDiv');" style="width: 170px; height: 120px; left: 300px;top:200px;">
+                        <div class="gaugeTitle">
+                            <label onclick="mydragg.min('floater_P3')" style="cursor: pointer">
+                                P3
+                            </label>
+                        </div>
+                        <div class="gaugePaneTop">
+                            <div id="gaugeP3" class="gaugePane">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaugeFloater2" id="floater_P4" title="PO" onshow="mydragg.onshow(this);" onmousedown="mydragg.startMoving(this, 'mapDiv', event);" onmouseup="mydragg.stopMoving(this,'mapDiv');" style="width: 170px; height: 120px; left: 450px;top:200px;">
+                        <div class="gaugeTitle">
+                            <label onclick="mydragg.min('floater_P4')" style="cursor: pointer">
+                                PO
+                            </label>
+                        </div>
+                        <div class="gaugePaneTop">
+                            <div id="gaugeP4" class="gaugePane">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--RIGHT-->
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"right"'
+             style="padding: 0 !important; margin: 0 !important; width: 2px;">
+        </div>
+        <!--BOTTOM-->
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"bottom"'
+             style="padding: 0 !important; margin: 0 !important; height: 2px;">
+        </div>
+    </div>
+    <!-- LOADING -->
+    <div id="divLoadingIndicator" class="divLoadingIndicator" style="display: block; opacity: 1.0">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="text-align: center">
+                    <table style="width: 100%; height: 100%;">
+                        <tr>
+                            <td style="text-align: right; width: 50%;">
+                                <img src="img/loading.gif" alt="loading" />
+                            </td>
+                            <td id="loadingMessage" style="color: #F0F0F0; font-size: 11px; text-align: left;
+                                font-weight: bold; font-style: italic;"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- WORKING -->
+    <div id="divWorking" class="divWorkingIndicator" style="display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="text-align: center">
+                    <table style="width: 100%; height: 100%;">
+                        <tr>
+                            <td style="text-align: center;">
+                                <img src="img/loading2.gif" alt="working" style="width: 30px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- ALERT -->
+    <div id="dialogAlertMessage" data-dojo-type="dijit/Dialog" title="Alert" style="width: 340px;
+        z-index: 10001;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center; padding-right: 4px; padding-left: 4px;">
+                    <img alt="icon" src="img/alert.png" style="width: 40px; height: 40px" />
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <div id="divMessage" style="background: #373737; color: #F0F0F0;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 12px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;" colspan="2">
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:function(){dijit.byId("dialogAlertMessage").hide();}'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- INFO -->
+    <div id="dialogInformationMessage" data-dojo-type="dijit/Dialog" title="Information"
+         style="width: 300px; z-index: 10000;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: center; padding-right: 4px; padding-left: 4px;">
+                    <img alt="icon" src="img/information.png" style="width: 40px; height: 40px" />
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <div id="divInformation" style="background: #373737; color: #F0F0F0;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 12px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;" colspan="2">
+                    <div data-dojo-type="dijit/form/Button" data-dojo-props='label:"OK", iconClass:"applyIcon", showLabel:false, onClick:function(){dijit.byId("dialogInformationMessage").hide();}'>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- LOGIN -->
+    <div id="dialogLogin" data-dojo-type="dijit/Dialog" title="MARVLIS Login"
+         style="width: 300px; z-index: 10000;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td style="vertical-align: middle; text-align: right; padding-right: 4px;">
+                    User Name:
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <input data-dojo-type="dijit/form/TextBox" data-dojo-props='id:"txtUserName", name:"txtUserName", type:"text", placeHolder:"administrator", required:"true", trim:true' />
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle; text-align: right; padding-right: 4px;">
+                    Password:
+                </td>
+                <td style="text-align: left; vertical-align: middle;">
+                    <input data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='id:"txtPassword", name:"txtPassword", type:"password", required:"true", invalidmessage:"Please enter password.", onKeyUp:onKeyUp_txtPassword'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 12px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;" colspan="2">
+                    <div><img src="img/white_check.png" class="logincheck" onclick="marvlis_login_check()" /></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- BASEMAP GALLERY -->
+    <div id="divGallery" class="hidden displayPane">
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", splitter:false, gutters:false'
+             style="height: 100%; width: 100%;">
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar3"'>
+                <table style="height: 100%; width: 100%; border-collapse: collapse">
+                    <tr>
+                        <td class="avlcfsTitle">
+                            <label id="unitMonitor">
+                                Basemaps
+                            </label>
+                        </td>
+                        <td style="text-align: right">
+                            <img alt="close" src="img/white_close.png" class="displayPaneClose" onclick="closeMapDivs('divGallery')" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                <div id="gallery" style="background-color: rgb(23,23,23);">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LEGEND -->
+    <div id="divLegend" class="hidden displayPane">
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props='design:"headline", splitter:false, gutters:false'
+             style="height: 100%; width: 100%;">
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"top", class:"avlcfsTitleBar3"'>
+                <table style="height: 100%; width: 100%; border-collapse: collapse">
+                    <tr>
+                        <td class="avlcfsTitle">
+                            <label id="unitMonitor">
+                                Legend
+                            </label>
+                        </td>
+                        <td style="text-align: right">
+                            <img alt="close" src="img/white_close.png" class="displayPaneClose" onclick="closeMapDivs('divLegend')" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='region:"center"'
+                 style="width: 100%; height: 100%; overflow: auto; padding: 2px !important;">
+                <div id="legend" style="background-color: rgb(23,23,23);">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿.cfsRow tr:nth-child(even)
+{
+    background-color: #232323;
+}
+
+.cfsCellBlank
+{
+    vertical-align: middle;
+    text-align: left;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+
+.cfsCellElapse
+{
+    vertical-align: middle;
+    text-align: right;
+    color: yellow;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+
+.cfsCellTimeStamp
+{
+    vertical-align: middle;
+    text-align: right;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+.cfsCellStatus
+{
+    vertical-align: middle;
+    text-align: right;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+.cfsCellID {
+    vertical-align: middle;
+    text-align: left;
+    color: white;
+    padding-left: 4px;
+    letter-spacing: 0.1em;
+    width: 10%;
+    visibility: hidden;
+    display: none;
+}
+.cfsCellIncident
+{
+    vertical-align: middle;
+    text-align: right;
+    font-weight: 600;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+
+.cfsCellPriority
+{
+    vertical-align: middle;
+    text-align: center;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+    font-weight: 600;
+    width:12px;
+}
+.cfsCellProblem
+{
+    vertical-align: middle;
+    text-align: left;
+    font-weight: 600;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+.cfsCellNotes
+{
+    vertical-align: middle;
+    text-align: left;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+}
+.cellOdd
+{
+    background-color: #3C3C3C;
+}
+.cellEven
+{
+    background-color: #1E1E1E;
+}
+.cfsDistrictHeader {
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}

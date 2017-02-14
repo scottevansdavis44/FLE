@@ -1,0 +1,800 @@
+﻿body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    font-size: 11pt !important;
+    background: rgb(23,23,23);
+}
+
+.myshowG {
+    visibility: visible;
+    display: block;
+}
+
+.myhideG {
+    visibility: hidden;
+    display: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+.geoZoom {
+    font-weight: normal;
+    color: rgb(225,225,225);
+}
+
+.pageHeaderTop {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url("../img/New_PortalBanner.png") no-repeat top left !important;
+    overflow: hidden;
+}
+
+.pageHeader {
+    width: 100%;
+    margin: 0 !important;
+    padding: 4px !important;
+    height: 44px;
+    overflow: hidden !important;
+}
+
+.pageHeaderInsert {
+    /*height: 100%;*/
+    background-color: rgb(30,30,30);
+    /*background-image: none;*/
+    border: 0.1em solid #000000; /*border-radius: 20px 20px 20px 20px;*/
+    box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;
+}
+
+.pageLeft {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 4px;
+    background: transparent !important;
+}
+
+.pageRight {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 4px;
+    background: transparent !important;
+}
+
+.pageBottom {
+    height: 4px;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.pageHeaderTitle {
+    color: rgb(225,225,225);
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-size: 14pt;
+    font-style: normal;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*right pane*/
+.avlcallTitleBar {
+    padding: 2px 2px 2px 6px !important;
+    margin: 6px !important;
+    overflow: hidden;
+    background-color: #2A2A2A !important;
+    border: 0.1em solid #808080 !important;
+    border-radius: 5px 5px 5px 5px !important;
+    color: #F0F0F0;
+    font-weight: normal;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+}
+
+.rightPaneToggleShow {
+    padding: 6px 10px 3px 6px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: #1E1E1E;
+    border-radius: 17px 0 0 17px;
+    z-index: 50;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.5 !important;
+}
+
+    .rightPaneToggleShow:hover {
+        opacity: 1.0 !important;
+    }
+
+.rightHide {
+    display: none !important;
+}
+
+.rightShow {
+    display: block !important;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles for toc*/
+.expandCell {
+    padding: 4px 2px 0 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkCell {
+    padding: 0 2px 5px 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkCell2 {
+    padding: 0 2px 4px 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.labelCell {
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for loading */
+.divLoadingIndicator {
+    height: 100%;
+    width: 100%;
+    font-size: 11px !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: Black;
+    color: #F0F0F0;
+    position: absolute;
+    bottom: 0;
+    filter: alpha(opacity = 65);
+    /*-moz-opacity: 0.65;
+    -khtml-opacity: 0.65;*/
+    opacity: 0.65;
+    z-index: 100;
+    letter-spacing: 0.1em;
+}
+
+#divSplashScreen_underlay {
+    z-index: 1001 !important;
+    background: rgba(0,0,0,0.65);
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* incident table styles */
+.callCellBlank {
+    vertical-align: middle;
+    text-align: left;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+}
+
+.callCellIncident {
+    vertical-align: middle;
+    text-align: right;
+    font-weight: normal;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #141414;
+}
+
+.callCellPriority {
+    vertical-align: middle;
+    text-align: center;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+    font-weight: normal;
+}
+
+.callCellProblem {
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+    background-color: #171717;
+}
+
+.avlCellID {
+    vertical-align: middle;
+    text-align: right;
+    color: #F0F0F0;
+    padding-right: 6px;
+    letter-spacing: 0.1em;
+    width: 10%;
+    visibility: hidden;
+    display: none;
+}
+
+.avlCellVehicle {
+    vertical-align: middle;
+    text-align: right;
+    font-weight: normal;
+    color: #333333;
+    padding-right: 6px;
+    letter-spacing: 0.1em;
+    width: 25%;
+}
+
+.avlCellStatus {
+    vertical-align: middle;
+    text-align: center;
+    color: #F0F0F0;
+    letter-spacing: 0.1em;
+}
+
+.avlCellIncident {
+    vertical-align: middle;
+    text-align: right;
+    font-weight: normal;
+    color: #F0F0F0;
+    padding-right: 6px;
+    letter-spacing: 0.1em;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*form display*/
+.opacityHideAnimation {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 1.0s ease-in;
+    -moz-transition: visibility 0s linear 0.5s,opacity 1.0s ease-in;
+    -o-transition: visibility 0s linear 0.5s,opacity 1.0s ease-in;
+}
+
+.opacityShowAnimation {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 1.0s ease-in;
+    -moz-transition: opacity 1.0s ease-in;
+    -o-transition: opacity 1.0s ease-in;
+}
+
+.divFormBack {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(50, 50, 50, 0.7);
+    z-index: 100;
+}
+
+.hideContainer {
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+    transition: All 0.5s ease-in;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.showContainer {
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+    transition: All 0.5s ease-in;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.divFormMaximize {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin-top: -300px !important;
+    margin-left: -500px !important;
+    background-color: rgb(30,30,30) !important;
+    border: 1px solid rgba(51, 51, 51, 0.8);
+    -moz-box-shadow: 7px 7px 8px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 7px 7px 8px rgba(50, 50, 50, 0.4);
+    box-shadow: 7px 7px 8px rgba(50, 50, 50, 0.4);
+    border-radius: 5px;
+    padding: 4px 4px 4px 4px !important;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: left;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*grid table*/
+.gridTable {
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gridTableHR_MainHeatTable {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+}
+
+.gridTableHR_MainHeatTableDays {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+}
+
+.gridTableHR_MaxContent {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.0em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 40px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+}
+
+.gridTableHC_MainHeatTable {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+}
+
+.gridTableHC_MainHeatTableDays {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.2em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+}
+
+.gridTableHC_MaxContent {
+    padding: 1px 1px 1px 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.0em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 40px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #FFFFFF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FFFFFF;
+}
+
+.gridTableHRClear_MainHeatTable {
+    padding: 1px;
+    height: 19px;
+}
+
+.gridTableHRClear_MainHeatTableDays {
+    padding: 1px;
+    height: 19px;
+}
+
+.gridTableHRClear_MaxContent {
+    padding: 1px;
+    height: 40px;
+}
+
+.gridTableCell_MainHeatTable {
+    padding: 1px;
+    color: #000000;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+}
+
+.gridTableCell_MainHeatTableDays {
+    padding: 1px;
+    color: #000000;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.55em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+}
+
+.gridTableCell_MaxContent {
+    padding: 1px;
+    color: #000000;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 40px;
+}
+
+.gridTableCellLegend_MainHeatTable {
+    padding: 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 8pt;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellLegend_MainHeatTableDays {
+    padding: 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 8pt;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellLegend_MaxContent {
+    padding: 1px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.0em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 40px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellLegend2_MainHeatTable {
+    padding: 4px 1px 1px 1px;
+    color: #FFFF00;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12pt;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellLegend2_MainHeatTableDays {
+    padding: 4px 1px 1px 1px;
+    color: #FFFF00;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12pt;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 19px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellLegend2_MaxContent {
+    padding: 4px;
+    color: #FFFF00;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 40px;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellStats_MainHeatTable {
+    padding: 2px 8px 2px 8px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellStats_MainHeatTableDays {
+    padding: 2px 8px 2px 8px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.1em;
+}
+
+.gridTableCellStats_MaxContent {
+    padding: 2px 8px 2px 8px;
+    color: #FFFFFF;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+    letter-spacing: 0.1em;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* grid container panes */
+.claro .gridContainerZone {
+    background-color: transparent !important;
+}
+
+.claro .gridContainerTable {
+    width: 100%;
+    border: 0 !important;
+}
+
+.gcTitlePaneLabel {
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 11pt !important;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.gcTitlePaneCell {
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 4px;
+}
+
+.gcTitlePaneBackground {
+    overflow: hidden !important;
+    padding: 2px !important;
+    margin: 0 !important;
+    height: 30px;
+    background: rgb(43,57,144);
+    /*background: -moz-linear-gradient(left, rgba(206,220,231,1) 0%, rgba(30,30,30,1) 100%); 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(206,220,231,1)), color-stop(100%,rgba(30,30,30,1)));
+    background: -webkit-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -o-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -ms-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#1E1E1E',GradientType=1 );*/
+}
+
+.gcTitlePaneBackground_Hist {
+    overflow: hidden !important;
+    padding: 2px !important;
+    margin: 0 !important;
+    height: 30px;
+    background: rgb(0,19,70);
+    /*background: -moz-linear-gradient(left, rgba(0,195,255,1) 0%, rgba(30,30,30,1) 100%); 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,195,255,1)), color-stop(100%,rgba(30,30,30,1))); 
+    background: -webkit-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -o-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -ms-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: linear-gradient(to right, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C3FF', endColorstr='#1E1E1E',GradientType=1 );*/
+}
+
+.gcTitlePaneBackgroundBottom {
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 1px;
+    background: rgb(43,57,144);
+    /*background: -moz-linear-gradient(left, rgba(206,220,231,1) 0%, rgba(30,30,30,1) 100%); 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(206,220,231,1)), color-stop(100%,rgba(30,30,30,1))); 
+    background: -webkit-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -o-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -ms-linear-gradient(left, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(30,30,30,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#1E1E1E',GradientType=1 );*/
+}
+
+.gcTitlePaneBackgroundBottom_Hist {
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 1px;
+    background: rgb(0,19,70);
+    /*background: -moz-linear-gradient(left, rgba(0,195,255,1) 0%, rgba(30,30,30,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,195,255,1)), color-stop(100%,rgba(30,30,30,1))); 
+    background: -webkit-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -o-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: -ms-linear-gradient(left, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    background: linear-gradient(to right, rgba(0,195,255,1) 0%,rgba(30,30,30,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C3FF', endColorstr='#1E1E1E',GradientType=1 );*/
+}
+
+.gcPane {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.1em;
+}
+
+.gcPaneBorderBackgound {
+    height: 48%;
+    background-color: #1E1E1E;
+    padding: 0 !important;
+    margin: 8px !important;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-left-color: rgb(43,57,144);
+    border-right-color: rgb(43,57,144);
+    box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;
+    /*-webkit-box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;
+    -moz-box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;*/
+}
+
+.gcPaneBorderBackgound_Map {
+    background-color: #1E1E1E;
+    padding: 0 !important;
+    margin: 0 9px 10px 8px !important;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-left-color: rgb(43,57,144);
+    border-right-color: rgb(43,57,144);
+    box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;
+    /*-webkit-box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;
+    -moz-box-shadow: rgba(0,0,0,0.60) 5px 5px 6px 0;*/
+}
+
+.gcPaneBorderBackgound_Hist {
+    height: 48%;
+    background-color: #1E1E1E;
+    padding: 0 !important;
+    margin: 8px !important;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-left-color: rgb(0,19,70);
+    border-right-color: rgb(0,19,70);
+    box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);
+    /*-webkit-box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);
+    -moz-box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);*/
+}
+
+.gcPaneBorderBackgoundTop {
+    height: 48%;
+    background-color: #1E1E1E;
+    padding: 0 !important;
+    margin: 0 8px 8px 8px !important;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-left-color: rgba(206,220,231,1);
+    border-right-color: rgba(30,30,30,1);
+    box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);
+    /*-webkit-box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);
+    -moz-box-shadow: 5px 5px 6px 0 rgba(0,0,0,0.60);*/
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* grid working */
+.divWorkingIndicator {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
+    z-index: 100;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Dialog*/
+.claro .dijitDialogPaneContent {
+    background-color: #000000 !important;
+    border-top: 1px solid #000000 !important;
+    color: White;
+}
+
+.claro .dijitDialog {
+    border: 1px solid #000000 !important;
+}
+
+.dijitDialogCloseIcon {
+    display: none;
+}
+
+.dijitDialogTitle {
+    font-size: 12pt !important;
+    color: #FFFFFF !important;
+}
+
+.dijitDialogTitleBar {
+    background: url(../img/titlebar.png) !important;
+    color: White;
+    height: 20px;
+    font-size: 12pt;
+    font-weight: normal;
+    background-color: #000000 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 4px 7px 3px 7px !important;
+    border-style: solid;
+    border-width: 0 0 1px 0 !important;
+    border-color: #ffffff;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*classbreak legend*/
+.classBreakLabels {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 4px white;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.classBreakTD {
+    vertical-align: middle;
+    text-align: center;
+}

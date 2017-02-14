@@ -1,0 +1,49 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* summary table */
+.summaryTable
+{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt !important;
+}
+.cellHeader
+{
+    vertical-align: middle;
+    text-align: right;
+    color: #FFBD35;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    background-color: #000000;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.cellCategory
+{
+    vertical-align: middle;
+    text-align: right;
+    color: #FFBD35;
+    letter-spacing: 0.1em;
+    padding-right: 4px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.cellNumbers
+{
+    vertical-align: middle;
+    text-align: right;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.cellOdd
+{
+    background-color: #3C3C3C;
+}
+.cellEven
+{
+    background-color: #1E1E1E;
+}

@@ -1,0 +1,369 @@
+﻿body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+    overflow: hidden;
+    font-size: 11pt !important;
+    background: rgb(23,23,23);
+}
+
+:focus {
+    outline: 0;
+}
+
+.myshowG {
+    visibility: visible;
+    display: block;
+}
+
+.myhideG {
+    visibility: hidden;
+    display: none;
+}
+
+.quickZoom {
+    font-weight: bold;
+    color: #000080;
+}
+
+.pageHeaderTop {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: url("../img/New_PortalBanner.png") no-repeat top left !important;
+    overflow: hidden;
+}
+
+.pageHeaderTitle {
+    color: rgb(225,225,225);
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-size: 14pt;
+    font-style: normal;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*table data grid*/
+.dialogTable {
+    width: 800px;
+    z-index: 1000;
+}
+
+.divTableBody {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    color: #000000;
+    font-size: 10pt;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*custom start date*/
+.divStartDate {
+    width: 300px;
+    z-index: 10000;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*basemaps*/
+.basemaps {
+    border: 1px solid #57585A;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    position: absolute;
+    top: 10px;
+    left: 744px;
+    width: 64px;
+    height: 32px;
+    z-index: 2;
+    background-color: white;
+    overflow: hidden;
+}
+
+.dialogMobileBasemap {
+    width: 400px;
+    z-index: 1000;
+}
+
+.divMobileBasemap {
+    width: 100%;
+    height: 430px;
+    overflow: auto;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*color picker*/
+.colorPicker {
+    border: 1px solid #57585A;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    left: 353px;
+    width: 120px;
+    height: 32px;
+    background-color: white;
+    overflow: hidden;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*measure tools*/
+.measureTool {
+    border: 1px solid #57585A;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    left: 617px;
+    width: 110px;
+    height: 32px;
+    background-color: #fff;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*draw tools*/
+.drawTool {
+    border: 1px solid #57585A;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    left: 490px;
+    width: 110px;
+    height: 32px;
+    background-color: #fff;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*event legend for child*/
+.legend_child_table {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 900;
+    border-spacing: 6px;
+}
+
+.legend_child_intable {
+    background-color: #C0C0C0;
+    border-radius: 5px 5px 5px 5px !important;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3) !important;
+}
+
+.legend_child_label_td {
+    padding-top: 4px;
+    padding-left: 10px;
+    font-weight: bold;
+    padding-right: 10px;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.legend_child_icon_td {
+    padding-left: 4px;
+    padding-top: 4px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles for chart*/
+.chartPane {
+    background-color: #1E1E1E;
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute !important;
+    bottom: 2px !important;
+    right: 2px !important;
+    z-index: 1000 !important;
+    border-radius: 5px 5px 5px 5px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    visibility: visible;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+    .chartPane:hover {
+        opacity: 1.0;
+    }
+
+.chartPane_child {
+    background-color: #1E1E1E;
+    width: 500px !important;
+    height: 500px !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px;
+    z-index: 1000 !important;
+    border-radius: 7px 7px 7px 7px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+    visibility: visible;
+    overflow: hidden;
+    opacity: 0.95;
+    margin: -300px 0 0 0;
+}
+
+.chartPaneLabel {
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #FF6600;
+}
+
+.chartPaneLabel_child {
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #FF6600;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles pan button*/
+.panButton {
+    background-image: url(../img/pan.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+    border-radius: 17px !important;
+    /*box-shadow: 0 0 0.25em #BBBBBB !important;*/
+    width: 31px !important;
+    height: 31px !important;
+    position: absolute;
+    right: 10px;
+    top: 138px;
+    z-index: 50;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+    .panButton:hover {
+        opacity: 1.0;
+        /*box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;*/
+    }
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles for toc*/
+.expandCell {
+    padding: 4px 2px 0 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkCell {
+    padding: 0 2px 5px 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkCell2 {
+    padding: 0 2px 4px 2px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.labelCell {
+    vertical-align: middle;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*locations*/
+.tableLocations {
+    width: 100%;
+}
+
+.tdLocations {
+    padding: 2px 6px 2px 6px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.tdLocationsSelected {
+    padding: 2px 6px 2px 6px;
+    cursor: pointer;
+    color: #FFCC66;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for loading */
+.divLoadingIndicator {
+    height: 100%;
+    width: 100%;
+    font-size: 11px !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: Black;
+    color: #F0F0F0;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for loading */
+.divWorkingIndicator {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
+    z-index: 100;
+}
+
+#divSplashScreen_underlay {
+    z-index: 1001 !important;
+    background: rgba(0,0,0,0.65);
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for online */
+.agol_grid {
+    height: auto;
+    background-color: azure;
+}
+
+    .agol_grid .dgrid-scroller {
+        position: relative;
+        max-height: 376px;
+        overflow: auto;
+    }
+
+    .agol_grid .dgrid-row {
+        clear: both;
+        min-height: 64px;
+        padding: 0.5em;
+    }
+
+.agol_gridpane {
+    overflow: hidden;
+    width: 480px;
+    height: 500px;
+    margin: 0;
+}
+
+.agol_thumbnail {
+    float: left;
+    width: 72px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.agol_img {
+    width: 50px;
+    height: 50px;
+}
+
+.group-id {
+    font-weight: bold;
+}
+
+.agol_title {
+    padding-right: 4px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0066FF;
+}
+
+.agol_owner {
+    padding-right: 4px;
+    font-style: italic;
+}
+
+.agol_summary {
+    margin: .5em;
+    color: black;
+}

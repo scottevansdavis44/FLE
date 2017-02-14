@@ -1,0 +1,129 @@
+Part 1
+
+(Marvlis.SDE.Incidents.Date_Incident >= DATEADD(week,-52, GETDATE()) AND Marvlis.SDE.Incidents.Date_Incident < DATEADD(day, 1-DATEPART(dw,  GETDATE()), GETDATE())) AND Marvlis.SDE.Incidents.Offense_Description IN ('CRIMINAL HOMICIDE - MURDER','HOMICIDE NEGLIGENCE','RAPE FEMALE BY MALE','RAPE MALE BY MALE','ROBBERY - BUSINESS','ROBBERY - INDIVIDUAL','ROBBERY - SHOPLIFTING ESCALATION','ROBBERY OF DELIVERY DRIVER','AGG ASSAULT DOMESTIC FELONY','AGG ASSAULT DOMESTIC MISD','AGG ASSAULT FELONY','AGG ASSAULT MISDEMEANOR','AGG ASSAULT OFFICER FELONY','AGG ASSAULT OFFICER MISD','SHOOT INTO OCCUP DWELL FEL','SHOOT INTO OCCUP VEH FEL','AGG ASLT SEX MOTIVE','BURGLARY - FORCE ENTRY - RES - HOMEINVS','BURGLARY - FORCIBLE ENTRY - BUSINESS','BURGLARY - FORCIBLE ENTRY - RESIDENCE','BURGLARY - NO FORCE ENTRY - BUSINESS','BURGLARY - NO FORCE ENTRY - RESIDENCE','LARCENY - POCKET-PICKING','LARCENY - PURSESNATCHING','LARCENY - SHOPLIFTING','LARCENY - FROM MOTOR VEHICLE','LARCENY - AUTOMOBILE ACCESSORIES','LARCENY - FROM BUILDING','LARCENY - COIN-OPERATED DEVICE','LARCENY - ALL OTHER','LARCENY - BICYCLE','LARCENY - GAS','LARCENY - MEDICATION','MOTOR VEHICLE THEFT - AUTOMOBILE','MOTOR VEHICLE THEFT - TRUCK','MOTOR VEHICLE THEFT - RECREATIONAL VEHICLE','MOTOR VEHICLE THEFT - OTHER VEHICLE','ASSAULT - SIMPLE - OFFICER','ASSAULT - SIMPLE DOMESTIC','ASSAULT - SIMPLE PHYSICAL','ALL OTHER - COMMUNICATING THREATS','ALL OTHER - STALKING','ASSAULT - NON PHYSICAL','ASSAULT - NON PHYSICAL OFFICER','OTHER - THREATENING PHONE CALL','PHYSICAL ASLT - SEXUAL MOTIVE','NON-PHYSICAL ASSAULT SEXUAL MOTIVE','ASSAULT - DOMESTIC VIOLENCE','SIMPLE ASLT ALL OTHER','ARSON')
+
+Part 2
+
+(Marvlis.SDE.Incidents.Date_Incident >= DATEADD(week,-52, GETDATE()) AND Marvlis.SDE.Incidents.Date_Incident < DATEADD(day, 1-DATEPART(dw,  GETDATE()), GETDATE())) AND  Marvlis.SDE.Incidents.ucr_code IN ('1011','1012','1013','1014','1015','1016','1021','1022','1023','1024','1025','1026','1027','1110','1120','1130','1140','1150','1160','1170','1180','1190','1210','1220','1310','1320','1330','1340','1400','1510','1520','1530','1540','1550','1590','1610','1620','1710','1720','1730','1740','1750','1760','1770','1780','1790','1810','1820','1831','1832','1833','1834','1835','1836','1890','1920','1930','1941','1942','1943','1944','1945','1946','1950','1990','2010','2020','2030','2040','2090','2100','2210','2211','2212','2213','2214','2220','2221','2222','2223','2224','2225','2230','2240','2250','2290','2410','2420','2430','2446','2450','2490','2510','2520','2530','2540','2550','2560','2570','2580','2590')
+
+TSR
+
+Marvlis.SDE.TSR.stopdate >= DATEADD(week,-52, GETDATE()) AND Marvlis.SDE.TSR.stopdate < DATEADD(day, 1-DATEPART(dw,  GETDATE()), GETDATE())
+
+
+FC
+
+Marvlis.SDE.Field_Contact.fcdate >= DATEADD(week,-52, GETDATE()) AND Marvlis.SDE.Field_Contact.fcdate < DATEADD(day, 1-DATEPART(dw,  GETDATE()), GETDATE())
+
+
+CFS
+
+Marvlis.SDE.CFS.Date_Received >= DATEADD(week,-52, GETDATE()) AND Marvlis.SDE.CFS.Date_Received < DATEADD(day, 1-DATEPART(dw,  GETDATE()), GETDATE())
+
+
+
+HISTOGRAMS
+
+SELECT [WK], COUNT([Date_Received]) AS EventCount,
+ ROW_NUMBER() OVER (ORDER BY dateadd(week, datediff(week, 0, DATEADD(week, -[WK], GETDATE())), 0)) AS Row,
+CONVERT(VARCHAR(12), CAST(dateadd(week, datediff(week, 0, DATEADD(week, -[WK], GETDATE())), 0) AS DATE), 107) AS FirstDayOfWeek,
+DATEPART(week, CAST(dateadd(ww, datediff(ww, 0, DATEADD(week, -[WK], GETDATE())), 0) AS DATE)) AS WeekOfYear,
+LEFT(DATENAME(month, CAST(dateadd(ww, datediff(ww, 0, DATEADD(week, -[WK], GETDATE())), 0) AS DATE)), 3) AS MonthOfWeek
+  FROM [crime].[sde].[FLE_Admin_Weeks] w LEFT OUTER JOIN [crime].[sde].[CFS] c ON w.[WK] = DATEPART(week,[Date_Received])
+  AND ([Date_Received] >= CAST(DATEADD(week, -52, GETDATE()) AS DATE) AND [Date_Received] < CAST(dateadd(week, datediff(week, 0, getdate()), 0) AS DATE)) 
+  GROUP BY [WK] 
+  ORDER BY dateadd(week, datediff(week, 0, DATEADD(week, -[WK], GETDATE())), 0)
+
+
+SELECT [DYIDX], COUNT([Date_Received]) AS EventCount, 
+CONVERT(VARCHAR(12), CAST(dateadd(day, [DYIDX]-1, dateadd(year, datediff(year, 0, DATEADD(day, -45, GETDATE())), 0)) AS DATE), 107) AS DayDate,
+ROW_NUMBER() OVER (ORDER BY dateadd(day, [DYIDX]-1, dateadd(year, datediff(year, 0, DATEADD(day, -45, GETDATE())), 0))) AS Row
+ FROM [crime].[sde].[FLE_Admin_DaysOfYear] d LEFT OUTER JOIN [crime].[sde].[CFS] c ON d.[DYIDX] = DATEPART(dayofyear,[Date_Received])
+AND ([Date_Received] >= CAST(DATEADD(day, -45, GETDATE()) AS DATE) AND [Date_Received] <= CAST(DATEADD(day, -1, GETDATE()) AS DATE))
+ AND [nature] IN ('TRAFFIC STOP')
+   GROUP BY [DYIDX]
+   HAVING [DYIDX] >= DATEPART(dayofyear, DATEADD(day, -45, GETDATE())) AND [DYIDX] <= DATEPART(dayofyear, DATEADD(day, -1, GETDATE()))
+   ORDER BY dateadd(day, [DYIDX]-1, dateadd(year, datediff(year, 0, CAST(DATEADD(day, -45, GETDATE()) AS DATE)), 0))
+
+HEAT INDEX
+
+SELECT count([Date_Received]) AS EventCount, DATEPART(weekday, [Date_Received]) - 1 AS DY, DATEPART(hour, [Date_Received]) AS HR
+FROM [crime].[sde].[CFS]
+WHERE ([Date_Received] >= CAST(DATEADD(week, -52, GETDATE()) AS DATE) AND [Date_Received] < CAST(dateadd(week, datediff(week, 0, getdate()), 0) AS DATE))
+GROUP BY DATEPART(weekday, [Date_Received]), DATEPART(hour, [Date_Received])
+
+
+TRENDS
+
+USE [Marvlis]
+GO
+
+SELECT [district], 1.0*sum((x-xbar)*(y-MinuteAverage))/sum((x-xbar)*(x-xbar)) AS RegressCoeff, AVG(DATEDIFF (second, [Date_Received], [Time_Onscene])) / 60 AS Average
+FROM
+(
+    SELECT [district], [Date_Received], [Time_Onscene],
+        AVG(DATEDIFF (minute, [Date_Received], [Time_Onscene])) OVER(PARTITION BY [district]) AS MinuteAverage,
+        DATEDIFF (minute, [Date_Received], [Time_Onscene]) AS y,
+        AVG(DATEPART(hour, [Date_Received])) OVER(PARTITION BY [district]) AS xbar,
+        DATEPART(hour, [Date_Received]) AS x
+    FROM [sde].[CFS]
+	WHERE [Date_Received] >= DATEADD(day, -1, GETDATE()) AND ([Date_Received] IS NOT NULL AND [Time_Onscene] IS NOT NULL)
+   AND DATEDIFF (minute, [Date_Received], [Time_Onscene]) > 0
+   ) AS Calcs
+  GROUP BY [district] 
+  HAVING sum((x-xbar)*(x-xbar))>0
+GO
+
+
+
+SELECT BCS_WOY, COUNT(*) AS CNT, MIN(BCS_YMD) AS MINDATE, MAX(BCS_YMD) AS MAXDATE
+  FROM SDE.dbo.Incidents LEFT OUTER JOIN SDE.DBO.Codes_Incident_Part1 ON SDE.dbo.Incidents.Offense_Description = SDE.DBO.Codes_Incident_Part1.code
+  WHERE Date_Incident >= DATEADD(week, -52, GETDATE()) AND Date_Incident IS NOT NULL 
+  AND SDE.DBO.Incidents.Offense_Description IN ('ALL OTHER - COMMUNICATING THREATS','ALL OTHER - STALKING','ASSAULT - DOMESTIC VIOLENCE','ASSAULT - NON PHYSICAL','ASSAULT - NON PHYSICAL OFFICER','ASSAULT - SIMPLE - OFFICER','ASSAULT - SIMPLE DOMESTIC','ASSAULT - SIMPLE PHYSICAL','NON-PHYSICAL ASSAULT SEXUAL MOTIVE','OTHER - THREATENING PHONE CALL','PHYSICAL ASLT - SEXUAL MOTIVE','SIMPLE ASLT ALL OTHER')
+   group by BCS_WOY
+   order by MIN(BCS_YMD)
+
+
+BCS UPDATE FIELDS
+
+UPDATE [crime].[sde].[CFS]
+SET [Date_Received] = DATEADD(day, 182, [Date_Received])
+
+UPDATE [crime].[sde].[CFS]
+SET [BCS_HOD] = DATEPART(hour, [Date_Received]),
+[BCS_WOY] = DATEPART(week, [Date_Received]),
+[BCS_YYY] = DATEPART(year, [Date_Received]),
+[BCS_DOW] = DATENAME(weekday, [Date_Received]),
+[BCS_YMD] = CONVERT(VARCHAR(8), [Date_Received], 112)
+
+UPDATE [crime].[sde].[INCIDENTS]
+SET [Date_Incident] = DATEADD(day, 182, [Date_Incident])
+
+UPDATE [crime].[sde].[INCIDENTS]
+SET [BCS_HOD] = DATEPART(hour, [Date_Incident]),
+[BCS_WOY] = DATEPART(week, [Date_Incident]),
+[BCS_YYY] = DATEPART(year, [Date_Incident]),
+[BCS_DOW] = DATENAME(weekday, [Date_Incident]),
+[BCS_YMD] = CONVERT(VARCHAR(8), [Date_Incident], 112)
+
+UPDATE [crime].[sde].[FIELD_CONTACT]
+SET [fcdate] = DATEADD(day, 182, [fcdate])
+
+UPDATE [crime].[sde].[FIELD_CONTACT]
+SET [BCS_HOD] = DATEPART(hour, [fcdate]),
+[BCS_WOY] = DATEPART(week, [fcdate]),
+[BCS_YYY] = DATEPART(year, [fcdate]),
+[BCS_DOW] = DATENAME(weekday, [fcdate]),
+[BCS_YMD] = CONVERT(VARCHAR(8), [fcdate], 112)
+
+UPDATE [crime].[sde].[TSR]
+SET [stopdate] = DATEADD(day, 182, [stopdate])
+
+UPDATE [crime].[sde].[TSR]
+SET [BCS_HOD] = DATEPART(hour, [stopdate]),
+[BCS_WOY] = DATEPART(week, [stopdate]),
+[BCS_YYY] = DATEPART(year, [stopdate]),
+[BCS_DOW] = DATENAME(weekday, [stopdate]),
+[BCS_YMD] = CONVERT(VARCHAR(8), [stopdate], 112)
+
+

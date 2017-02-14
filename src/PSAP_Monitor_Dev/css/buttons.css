@@ -1,0 +1,46 @@
+﻿/*button*/
+.claro .dijitDropDownButton .dijitButtonNode {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+.claro .dijitDropDownButtonHover .dijitButtonNode {
+    background-color: #A9A9A9 !important;
+    background-image: url("../img/titlebar.png") !important;
+}
+
+.claro .dijitButton .dijitButtonNode {
+    padding: 8px !important;
+    background-color: #414042 !important;
+    background-image: none !important;
+    border: 1px solid white !important;
+    border-radius: 7px 7px 7px 7px !important;
+    color: #F0F0F0 !important;
+    letter-spacing: 0.1em;
+}
+
+.claro .dijitButtonHover .dijitButtonNode {
+    background-color: #6F91E2 !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for dijit buttons*/
+.claro .dijitToggleButton .dijitButtonNode {
+    background-color: #414042 !important;
+    background-image: none !important;
+    border: 1px solid white !important;
+    border-radius: 7px 7px 7px 7px !important;
+    color: #F0F0F0 !important;
+    padding: 8px !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    font-weight: normal;
+}
+
+.claro .dijitToggleButtonHover .dijitButtonNode {
+    background-color: #6F91E2 !important;
+}
+
+.claro .dijitToggleButtonChecked .dijitButtonNode {
+    background-color: #1753E8 !important;
+}

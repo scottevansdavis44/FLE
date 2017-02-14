@@ -1,0 +1,158 @@
+﻿.simpleInfoWindow
+{
+    color: #FFFFFF !important;
+    background-color: #373737 !important;
+    border: 1px solid #666666 !important;
+}
+.simpleInfoWindow .title
+{
+    font-weight: bold !important;
+}
+.esriPopup
+{
+    font-size: 8pt !important;
+    color: #FFFFFF !important;
+}
+.esriPopup .contentPane
+{
+    background-color: #373737 !important;
+    font-size: 8pt !important;
+    color: #FFFFFF !important;
+    border-radius: 0 0 5px 5px;
+}
+.esriPopup .actionsPane
+{
+    background-color: #C0C0C0 !important;
+    visibility: hidden;
+    display: none;
+}
+.esriPopup .titlePane
+{
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255);
+    line-height: 36px !important;
+    cursor: default;
+    font-weight: bold !important;
+    font-size: 8pt !important;
+}
+.esriPopup .titleButton.close
+{
+    right: 10px !important;
+    top: 6px !important;
+    background-position: 0px -175px !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+.esriPopup .titleButton.maximize
+{
+    right: 36px !important;
+    background-position: 0px -249px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 7px !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+.esriPopup .titleButton.next
+{
+    right: 41px !important;
+    background-position: 0px -443px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 6px !important;
+}
+.esriPopup .titleButton.prev
+{
+    right: 72px !important;
+    background-position: 0px -224px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 6px !important;
+}
+.esriPopup .titleButton
+{
+    top: 4px !important;
+    background: url("../img/popup.png") no-repeat scroll 0% 0% transparent !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*slider customizations*/
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton, .esriSimpleSliderVertical .esriSimpleSliderDecrementButton
+{
+    border-radius: 17px !important;
+    box-shadow: 0 0 0.25em #BBBBBB;
+}
+.esriSimpleSlider
+{
+    top: 4px !important;
+    left: 10px !important;
+    right: auto !important;
+}
+.esriSimpleSlider
+{
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+.esriSimpleSlider div
+{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+.esriSimpleSlider div:hover
+{
+    opacity: 1.0;
+}
+/*slider background*/
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton, .esriSimpleSliderVertical .esriSimpleSliderDecrementButton
+{
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+}
+/* home nav button */
+.HomeButton .home
+{
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+    border-radius: 17px !important;
+    box-shadow: 0 0 0.25em #BBBBBB !important;
+    width: 27px !important;
+    height: 27px !important;
+}
+.HomeButton
+{
+    position: absolute;
+    top: 96px;
+    left: 10px;
+    z-index: 50;
+}
+.homeContainer
+{
+    opacity: 0.5 !important;
+}
+.homeContainer:hover
+{
+    opacity: 1.0 !important;
+}
+.LocateButton
+{
+    position: absolute;
+    top: 136px;
+    left: 10px;
+    z-index: 50;
+}
+.LocateButton .zoomLocateButton
+{
+    border-radius: 17px !important;
+}
+.locateContainer
+{
+    opacity: 0.5 !important;
+}
+.locateContainer:hover
+{
+    opacity: 1.0 !important;
+}

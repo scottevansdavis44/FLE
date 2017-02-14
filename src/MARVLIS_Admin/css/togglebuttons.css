@@ -1,0 +1,23 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for dijit buttons*/
+.claro .dijitToggleButton .dijitButtonNode
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0.1em solid transparent !important;
+    border-radius: 18px 18px 18px 18px !important;
+    color: #F0F0F0 !important;
+    height: 20px !important;
+    width: 20px !important;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    padding-top: 4px !important;
+}
+.claro .dijitToggleButtonHover .dijitButtonNode
+{
+    background-color:  aliceblue !important;
+}
+.claro .dijitToggleButtonChecked .dijitButtonNode
+{
+    background-color:  rgb(43,57,144) !important;
+}

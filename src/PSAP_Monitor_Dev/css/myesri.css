@@ -1,0 +1,165 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*slider customizations*/
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton, .esriSimpleSliderVertical .esriSimpleSliderDecrementButton {
+    border-radius: 17px !important;
+    box-shadow: 0 0 0.25em #BBBBBB !important;
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+}
+
+.esriSimpleSlider {
+    top: 4px !important;
+    right: 10px !important;
+    left: auto !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+    .esriSimpleSlider div {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        opacity: 0.5;
+    }
+
+        .esriSimpleSlider div:hover {
+            opacity: 1.0;
+        }
+/* home nav button */
+.HomeButton .home {
+    background-color: rgba(102,102,102,0.80) !important;
+    border: solid 1px #545454;
+    border-radius: 17px !important;
+    box-shadow: 0 0 0.25em #BBBBBB !important;
+    width: 27px !important;
+    height: 27px !important;
+}
+
+.HomeButton {
+    position: absolute;
+    top: 96px;
+    right: 10px;
+    z-index: 50;
+}
+
+.homeContainer {
+    opacity: 0.5 !important;
+}
+
+    .homeContainer:hover {
+        opacity: 1.0 !important;
+    }
+/* basemap button */
+.basemapButton {
+    padding: 2px;
+    position: absolute;
+    top: 138px;
+    right: 10px;
+    z-index: 50;
+    background-color: rgba(102,102,102,0.80);
+    background-image: url(../img/basemap.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: solid 1px #545454;
+    border-radius: 17px;
+    box-shadow: 0 0 0.25em #BBBBBB;
+    width: 27px;
+    height: 27px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+    .basemapButton:hover {
+        opacity: 1.0;
+    }
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*search*/
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 60px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3) !important;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*popup*/
+.simpleInfoWindow {
+    color: #FFFFFF !important;
+    background-color: rgb(23,23,23) !important;
+    border: 1px solid #666666 !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .simpleInfoWindow .title {
+        font-weight: bold !important;
+    }
+
+.esriPopup {
+    font-size: 12pt !important;
+    color: #FFFFFF !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .esriPopup .contentPane {
+        background-color: rgb(23,23,23) !important;
+        font-size: 11pt !important;
+        color: #FFFFFF !important;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .esriPopup .actionsPane {
+        background-color: #C0C0C0 !important;
+        visibility: hidden;
+        display: none;
+    }
+
+    .esriPopup .titlePane {
+        background-color: rgb(23,23,23) !important;
+        color: rgb(255, 255, 255);
+        line-height: 40px !important;
+        cursor: default;
+        font-weight: 600 !important;
+        font-size: 14pt !important;
+        font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .esriPopup .titleButton.close {
+        right: 10px !important;
+        top: 9px !important;
+        background-position: 0 -175px !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .esriPopup .titleButton.maximize {
+        right: 36px !important;
+        background-position: 0 -249px !important;
+        width: 24px !important;
+        height: 24px !important;
+        top: 9px !important;
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .esriPopup .titleButton.next {
+        right: 41px !important;
+        background-position: 0 -443px !important;
+        width: 24px !important;
+        height: 24px !important;
+        top: 8px !important;
+    }
+
+    .esriPopup .titleButton.prev {
+        right: 72px !important;
+        background-position: 0 -224px !important;
+        width: 24px !important;
+        height: 24px !important;
+        top: 8px !important;
+    }
+
+    .esriPopup .titleButton {
+        top: 4px !important;
+        background: url("../img/popup.png") no-repeat scroll 0 0 transparent !important;
+    }

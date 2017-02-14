@@ -1,0 +1,50 @@
+﻿.gaugeMinTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gaugeMinSubTable {
+    width: 100%;
+    border-collapse: collapse;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.gaugeMinSubTableTD {
+    padding-bottom: 12px;
+}
+
+.gaugeMinTitle {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.guageMinAllCalls {
+    width: 33%;
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.guageMinUnassignedCalls {
+    width: 33%;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.gaugeMinPipe {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}

@@ -1,0 +1,240 @@
+﻿.refreshIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/refresh.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.part1Icon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/part1.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.part2Icon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/part2.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.tsrIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/tsr.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.fcIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/fc.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.cfsIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/cfs.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.addressIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_address.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.minimizeIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/minimize.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.historyIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/history.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.basemapIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/basemap.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.callIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/calls.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.unitIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/avl.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.layerIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/layers.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.feedIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/feeds.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.hotspotIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/hotspot.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.queryIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/query.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.query2Icon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/query2.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.pickIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_pick.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.gpsIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_gps.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.clearBrushIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_clear.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.manIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/man18x18.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.pictIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/pictometry18x18.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.applyIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_check.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.cancelIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_close.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.northIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_n.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.southIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_s.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.eastIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_e.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.westIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_w.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.plusIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_plus.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.minusIcon
+{
+    background-position: 0px 0px;
+    background-image: url(../img/white_minus.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}

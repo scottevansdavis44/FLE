@@ -1,0 +1,62 @@
+﻿.editIcon {
+    background-position: 0 0;
+    background-image: url(../img/edit.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.cfsIcon {
+    background-position: 0 0;
+    background-image: url(../img/cfs.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.avlIcon {
+    background-position: 0 0;
+    background-image: url(../img/avl.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.chartIcon {
+    background-position: 0 0;
+    background-image: url(../img/columns.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.basemapIcon {
+    background-position: 0 0;
+    background-image: url(../img/basemap.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.layerIcon {
+    background-position: 0 0;
+    background-image: url(../img/layers.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.feedIcon {
+    background-position: 0 0;
+    background-image: url(../img/feeds.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.applyIcon {
+    background-position: 0 0;
+    background-image: url(../img/white_check.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}

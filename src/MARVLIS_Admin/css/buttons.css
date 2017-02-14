@@ -1,0 +1,26 @@
+﻿/*button*/
+.claro .dijitDropDownButton .dijitButtonNode
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+}
+.claro .dijitDropDownButtonHover .dijitButtonNode
+{
+    background-color: #A9A9A9 !important;
+    background-image: url("../img/titlebar.png") !important;
+}
+.claro .dijitButton .dijitButtonNode
+{
+    padding: 11px !important;
+    background-color: #2A2A2A !important;
+    background-image: none !important;
+    border: 0.1em solid #808080 !important;
+    border-radius: 23px 23px 23px 23px !important;
+    color: #F0F0F0 !important;
+    letter-spacing: 0.1em;
+}
+.claro .dijitButtonHover .dijitButtonNode
+{
+    border: 0.1em solid #FFCC00 !important;
+}

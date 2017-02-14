@@ -1,0 +1,129 @@
+﻿/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles for dijit select*/
+.claro .dijitSelect .dijitButtonText
+{
+    padding: 2px !important;
+}
+.claro .dijitSelect
+{
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+    border-collapse: separate;
+    border-radius: 3px 3px 3px 3px !important;
+    color:rgb(225,225,225);
+    font-family: sans-serif;
+    padding-left: 8px !important;
+}
+.dj_ie6 .claro .dijitSelect, .dj_ie6 .claro .dijitSelect .dijitButtonNode
+{
+    background-image: none;
+}
+.claro .dijitSelect .dijitButtonContents
+{
+    border: 0 solid transparent !important;
+    border-right-width: 1px;
+}
+.claro .dijitSelect .dijitArrowButton
+{
+    padding: 0;
+    border: 1px solid transparent !important;
+    border-radius: 0 0 0 0 !important;
+    border-top: none;
+    background-color: transparent !important;
+    background-image: none !important;
+    background-repeat: repeat-x;
+}
+.claro .dijitSelect .dijitArrowButton .dijitArrowButtonInner
+{
+    background-image: url(../img/DropDownButton.png) !important;
+    background-position: 0 0 !important;
+    height: 16px !important;
+    border: transparent !important;
+}
+.claro .dijitSelectHover
+{
+    border: 1px solid transparent;
+    background-color: #000000;
+}
+.claro .dijitSelectHover .dijitButtonContents
+{
+    border-color: transparent !important;
+}
+.claro .dijitSelectHover .dijitArrowButton
+{
+    background-color: transparent !important;
+}
+.claro .dijitSelectHover .dijitArrowButton .dijitArrowButtonInner
+{
+    background-position: -70px 70%;
+}
+.claro .dijitSelectFocused
+{
+    border: 1px solid transparent !important;
+}
+.claro .dijitSelectFocused .dijitButtonContents
+{
+    border-color: transparent !important;
+}
+.claro .dijitSelectFocused .dijitArrowButton
+{
+    background-color: transparent !important;
+    background-position: 0 -177px;
+    border: none;
+    padding: 0 1px;
+}
+.claro .dijitSelectFocused .dijitArrowButton .dijitArrowButtonInner
+{
+    background-position: -70px 70%;
+    margin-bottom: 1px;
+}
+.claro .dijitSelectDisabled
+{
+    border: 1px solid transparent;
+    background-color: #efefef;
+    background-image: none;
+    color: #818181;
+}
+.claro .dijitSelectDisabled .dijitArrowButton
+{
+    background-color: transparent;
+}
+.claro .dijitSelectDisabled .dijitArrowButton .dijitArrowButtonInner
+{
+    background-position: 0 70%;
+}
+.claro .dijitMenu .dijitMenuItem td, .claro .dijitComboBoxMenu .dijitMenuItem {
+    padding: 2px;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: transparent !important;
+}
+.claro .dijitSelectMenu
+{
+    padding: 4px !important;
+    background-color: #333333 !important;
+    color: rgb(225,225,225) !important;
+    font-size: 12pt;
+    border-radius: 0 0 3px 3px !important;
+    border: 1px solid transparent !important;
+}
+.claro .dijitSelectMenu td.dijitMenuItemIconCell, .claro .dijitSelectMenu td.dijitMenuArrowCell
+{
+    display: none;
+}
+.claro .dijitSelectMenu td.dijitMenuItemLabel
+{
+    padding: 2px;
+    color: rgb(225,225,225) !important;
+}
+.claro .dijitSelectMenu .dijitMenuSeparatorTop
+{
+    border-bottom: 1px solid #769dc0;
+    margin-top: 10px !important;
+}
+.claro .dijitSelectMenu .dijitMenuItemSelected td
+{
+    color: #FF0000 !important;
+    background-color: transparent !important;
+}
+

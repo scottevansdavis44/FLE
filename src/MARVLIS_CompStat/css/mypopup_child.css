@@ -1,0 +1,79 @@
+﻿.simpleInfoWindow
+{
+    color: #FFFFFF !important;
+    background-color: #373737 !important;
+    border: 1px solid #666666 !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.simpleInfoWindow .title
+{
+    font-weight: bold !important;
+}
+.esriPopup
+{
+    font-size: 16pt !important;
+    color: #FFFFFF !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.esriPopup .contentPane
+{
+    background-color: #373737 !important;
+    font-size: 16pt !important;
+    color: #FFFFFF !important;
+    border-radius: 0 0 5px 5px;
+}
+.esriPopup .actionsPane
+{
+    background-color: #C0C0C0 !important;
+    visibility: hidden;
+    display: none;
+}
+.esriPopup .titlePane
+{
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255);
+    line-height: 40px !important;
+    cursor: default;
+    font-weight: normal !important;
+    font-size: 16pt !important;
+    font-family: "Myriad Pro", "Trebuchet MS", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.esriPopup .titleButton.close
+{
+    right: 10px !important;
+    top: 9px !important;
+    background-position: 0 -175px !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+.esriPopup .titleButton.maximize
+{
+    right: 36px !important;
+    background-position: 0 -249px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 9px !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+.esriPopup .titleButton.next
+{
+    right: 41px !important;
+    background-position: 0 -443px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 8px !important;
+}
+.esriPopup .titleButton.prev
+{
+    right: 72px !important;
+    background-position: 0 -224px !important;
+    width: 24px !important;
+    height: 24px !important;
+    top: 8px !important;
+}
+.esriPopup .titleButton
+{
+    top: 4px !important;
+    background: url("../img/popup.png") no-repeat scroll 0 0 transparent !important;
+}
